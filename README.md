@@ -1,20 +1,21 @@
 # Salgateria
 
-O **Salgateria** é um software desenvolvido para auxiliar no cadastro de pedidos e no controle de estoque para empreendimentos focados na produção de salgados para festas.
+O **Salgateria** é um software desenvolvido para auxiliar na gestão de empreendimentos focados na produção de salgados para festas. O sistema oferece funcionalidades abrangentes para o controle e administração de diversos aspectos do negócio.
 
 ## Tecnologias Utilizadas
 
 - **Apache NetBeans IDE 12.6**: Ambiente de desenvolvimento integrado utilizado para o desenvolvimento do projeto.
 - **JDK 14**: Java Development Kit utilizado para compilar e executar o código Java.
 - **JavaFX Scene Builder 2.0**: Ferramenta utilizada para a criação da interface gráfica do usuário.
-- **MySQL**: Sistema de gerenciamento de banco de dados utilizado para armazenar informações de pedidos e controle de estoque.
+- **MySQL**: Sistema de gerenciamento de banco de dados utilizado para armazenar informações e dados do sistema.
 
 ## Funcionalidades
 
-- **CRUD de Insumos**: Gerencie insumos necessários para a produção de salgados, com operações de criação, leitura, atualização e exclusão.
-- **CRUD de Produtos**: Administre os produtos que serão vendidos aos clientes, incluindo criação, leitura, atualização e exclusão.
-- **CRUD de Pedidos**: Controle os pedidos realizados pelos clientes, com a capacidade de criar, visualizar, atualizar e excluir pedidos.
-- **CRUD de Funcionários**: Gerencie informações sobre funcionários, com operações de criação, leitura, atualização e exclusão.
+- **Controle de Estoque**: Gerencie o estoque de insumos, monitorando a quantidade disponível e realizando atualizações conforme necessário.
+- **Controle de Insumos**: Administre os insumos utilizados na produção, incluindo criação, atualização e exclusão de registros.
+- **Controle de Produtos**: Gerencie os produtos que serão vendidos aos clientes, com a capacidade de adicionar, editar e remover produtos.
+- **Administração de Pedidos**: Controle os pedidos realizados pelos clientes, incluindo a criação, visualização, atualização e exclusão de pedidos.
+- **Controle de Funcionários**: Gerencie as informações dos funcionários, permitindo a criação, visualização, atualização e exclusão de registros de funcionários.
 
 ## Instruções de Uso
 
