@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.Usuario_viewController">
+    <stylesheets>
+        <URL value="@usuario_view.css" />
+    </stylesheets>
+   <children>
+      <HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="822.0" styleClass="raiz" stylesheets="@menu_view.css">
+         <children>
+            <TabPane fx:id="tabpaneCadastro" prefHeight="529.0" prefWidth="823.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tabCadastro" text="Cadastro">
+                  <content>
+                    <AnchorPane fx:id="anchor_pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane fx:id="pane_azul" prefHeight="114.0" prefWidth="833.0" styleClass="pane_azul">
+                                 <children>
+                                    <Pane layoutX="210.0" layoutY="36.0" prefHeight="42.0" prefWidth="403.0" styleClass="btn_controle_de_estoque">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="-4.0" prefHeight="50.0" prefWidth="382.0" text="CADASTRO DE USUARIO" textFill="#353a56">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="34.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Button fx:id="btnMenu1" layoutY="7.0" mnemonicParsing="false" onAction="#btnMenu1_Click" styleClass="pane_azul" text="VOLTAR AO MENU" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../voltar%20branco.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font name="Century Gothic" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="554.0" layoutY="344.0" prefHeight="27.0" prefWidth="95.0" text="BAIRRO">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font></Label>
+                              <TextField fx:id="txtBairro" layoutX="553.0" layoutY="373.0" prefHeight="28.0" prefWidth="169.0">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font></TextField>
+                              <Button fx:id="btnCadastrar" layoutX="587.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnCadastrar_click" prefHeight="37.0" prefWidth="135.0" styleClass="btn_cadastrar" text="CADASTRAR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Cadastro%20branco.png" />
+                                       </image></ImageView>
+                                 </graphic></Button>
+                              <Label layoutX="132.0" layoutY="130.0" prefHeight="30.0" prefWidth="36.0" text="CPF">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="19.0" />
+                                 </font></Label>
+                              <TextField fx:id="txtCPF" alignment="CENTER" layoutX="131.0" layoutY="160.0" prefHeight="29.0" prefWidth="137.0" promptText="___.___.___-__">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font></TextField>
+                              <TextField fx:id="txtNome" layoutX="284.0" layoutY="160.0" prefHeight="30.0" prefWidth="438.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></TextField>
+                              <Label layoutX="286.0" layoutY="133.0" prefHeight="27.0" prefWidth="199.0" text="NOME COMPLETO">
+                                 <font>
+                                    <Font name="Century Gothic" size="19.0" />
+                                 </font></Label>
+                              <Label layoutX="135.0" layoutY="276.0" prefHeight="28.0" prefWidth="212.0" text="DATA DE NASCIMENTO">
+                                 <font>
+                                    <Font name="Century Gothic" size="19.0" />
+                                 </font></Label>
+                              <DatePicker fx:id="txtNascimento" layoutX="136.0" layoutY="302.0" prefHeight="28.0" prefWidth="161.0" />
+                              <Label layoutX="131.0" layoutY="200.0" prefHeight="27.0" prefWidth="95.0" text="SENHA">
+                                 <font>
+                                    <Font name="Century Gothic" size="19.0" />
+                                 </font></Label>
+                              <Label layoutX="406.0" layoutY="276.0" prefHeight="28.0" prefWidth="142.0" text="FONE CONTATO">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="19.0" />
+                                 </font></Label>
+                              <TextField fx:id="txtFone" layoutX="406.0" layoutY="303.0" prefHeight="30.0" prefWidth="137.0" promptText="(00) 00000-0000">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></TextField>
+                              <TextField fx:id="txtCEP" alignment="CENTER" layoutX="136.0" layoutY="376.0" prefHeight="28.0" prefWidth="96.0" promptText="_____-___">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font></TextField>
+                              <Label layoutX="137.0" layoutY="346.0" prefHeight="27.0" prefWidth="33.0" text="CEP">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font></Label>
+                              <TextField fx:id="txtLogradouro" layoutX="250.0" layoutY="375.0" prefHeight="28.0" prefWidth="193.0">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font></TextField>
+                              <Label layoutX="250.0" layoutY="345.0" prefHeight="27.0" prefWidth="150.0" text="LOGRADOURO">
+                                 <font>
+                                    <Font name="Century Gothic" size="19.0" />
+                                 </font></Label>
+                              <Label layoutX="459.0" layoutY="346.0" prefHeight="27.0" prefWidth="95.0" text="NÚMERO">
+                                 <font>
+                                    <Font name="Century Gothic" size="19.0" />
+                                 </font></Label>
+                              <TextField fx:id="txtNumero" alignment="CENTER" layoutX="473.0" layoutY="374.0" prefHeight="19.0" prefWidth="49.0">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font></TextField>
+                              <Label layoutX="138.0" layoutY="416.0" prefHeight="27.0" prefWidth="82.0" text="CIDADE">
+                                 <font>
+                                    <Font name="Century Gothic" size="19.0" />
+                                 </font></Label>
+                              <TextField fx:id="txtUF" alignment="CENTER" layoutX="298.0" layoutY="445.0" prefHeight="28.0" prefWidth="42.0">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font></TextField>
+                              <TextField fx:id="txtCidade" layoutX="137.0" layoutY="445.0" prefHeight="25.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></TextField>
+                              <Label alignment="CENTER" layoutX="307.0" layoutY="416.0" prefHeight="27.0" prefWidth="25.0" text="UF">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="19.0" />
+                                 </font></Label>
+                              <PasswordField fx:id="txtSenha" layoutX="131.0" layoutY="229.0" prefHeight="30.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></PasswordField>
+                              <ImageView fitHeight="76.0" fitWidth="88.0" layoutX="722.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../nachos%202.png" />
+                                 </image></ImageView>
+                              <PasswordField fx:id="txtConfirmarSenha" layoutX="405.0" layoutY="229.0" prefHeight="30.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </PasswordField>
+                              <Label layoutX="405.0" layoutY="200.0" prefHeight="27.0" prefWidth="199.0" text="CONFIRMAR SENHA">
+                                 <font>
+                                    <Font name="Century Gothic" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnAtualizar" layoutX="587.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnAtualizar_click" prefHeight="37.0" prefWidth="135.0" styleClass="btn_cadastrar" text="ATUALIZAR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Cadastro%20branco.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Controle de funcionários">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="540.0" prefHeight="505.0" prefWidth="286.0" styleClass="pane_azul">
+                                 <children>
+                                    <ImageView fitHeight="76.0" fitWidth="88.0" layoutX="196.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../nachos%202.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnEditar" layoutX="59.0" layoutY="209.0" mnemonicParsing="false" onAction="#btnEditar_Click" prefHeight="42.0" prefWidth="169.0" styleClass="btn_controle_de_estoque" text="EDITAR" textFill="WHITE">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../Cadastro%20branco.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="btnExcluir" layoutX="59.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnExcluir_Click" prefHeight="42.0" prefWidth="169.0" styleClass="btn_controle_de_estoque" text="EXCLUIR" textFill="WHITE">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../lixeira%20branco.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="btnMenu2" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnMenu2_Click" styleClass="pane_azul" text="VOLTAR AO MENU" textFill="WHITE">
+                                       <font>
+                                          <Font name="Century Gothic" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../voltar%20branco.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <ToolBar layoutY="-6.0" prefHeight="49.0" prefWidth="553.0" styleClass="pane_azul">
+                                <items>
+                                  <Button fx:id="btnBusca" mnemonicParsing="false" onAction="#btnBusca_Click" prefHeight="29.0" prefWidth="29.0" styleClass="btn_controle_de_estoque">
+                                       <graphic>
+                                          <ImageView fitHeight="9.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../loupe%20branco.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Label text="CPF" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Label>
+                                    <TextField fx:id="txtBuscaCPF" prefHeight="25.0" prefWidth="174.0" />
+                                    <Label text="Nome" textFill="WHITE">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="18.0" />
+                                       </font></Label>
+                                    <TextField fx:id="txtBuscaNome" prefHeight="25.0" prefWidth="231.0" />
+                                </items>
+                              </ToolBar>
+                              <TableView fx:id="TableView" layoutX="-1.0" layoutY="42.0" prefHeight="458.0" prefWidth="541.0">
+                                <columns>
+                                  <TableColumn fx:id="tcCPF" prefWidth="209.0" text="CPF" />
+                                    <TableColumn fx:id="tcNome" prefWidth="191.0" text="Nome" />
+                                    <TableColumn fx:id="tcCEP" prefWidth="138.0" text="CEP" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <tooltip>
+                        <Tooltip />
+                     </tooltip>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="513.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.Lucro_viewController">
+    <stylesheets>
+        <URL value="@lucro_view.css" />
+      <URL value="@../../../../../../../target/classes/br/com/fatec/view/menu_view.css" />
+    </stylesheets>
+   <children>
+      <DatePicker fx:id="txtDataInicial" editable="false" layoutX="122.0" layoutY="123.0" />
+      <Label layoutX="35.0" layoutY="123.0" prefHeight="25.0" prefWidth="80.0" text="DATA INICIAL">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Label>
+      <DatePicker fx:id="txtDataFinal" editable="false" layoutX="433.0" layoutY="123.0" />
+      <Label layoutX="49.0" layoutY="216.0" prefHeight="25.0" prefWidth="41.0" text="Lucro:">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblLucro" layoutX="89.0" layoutY="216.0" prefHeight="25.0" prefWidth="66.0" />
+      <Label layoutX="231.0" layoutY="259.0" prefHeight="25.0" prefWidth="140.0" text="Lucro últimos 30 dias:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="216.0" prefHeight="25.0" prefWidth="48.0" text="Vendas:">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="395.0" layoutY="216.0" prefHeight="25.0" prefWidth="130.0" text="Custo com mercadorias:">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblCusto" layoutX="537.0" layoutY="216.0" prefHeight="25.0" prefWidth="80.0" />
+      <Button fx:id="btnCalcular" layoutX="252.0" layoutY="166.0" mnemonicParsing="false" onAction="#btnCalcular_Click" prefHeight="35.0" prefWidth="197.0" styleClass="btn_deslogar" stylesheets="@menu_view.css" text="CALCULAR O INTERVALO" textFill="WHITE" />
+      <TableView fx:id="TableView" layoutY="251.0" prefHeight="280.0" prefWidth="645.0">
+        <columns>
+          <TableColumn fx:id="tcData" prefWidth="98.0" text="Data" />
+          <TableColumn fx:id="tcVenda" prefWidth="111.0" text="Vendas" />
+            <TableColumn fx:id="tcCusto" prefWidth="163.0" text="Custo com mercadorias" />
+            <TableColumn fx:id="tcLucro" prefWidth="110.0" text="Lucro " />
+            <TableColumn fx:id="tcQuantidade" prefWidth="162.0" text="quantidade de vendas" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblVendas" layoutX="240.0" layoutY="219.0" prefHeight="19.0" prefWidth="120.0" />
+      <Pane fx:id="pane_azul" prefHeight="114.0" prefWidth="833.0" styleClass="pane_azul" stylesheets="@usuario_view.css">
+         <children>
+            <Pane layoutX="165.0" layoutY="36.0" prefHeight="42.0" prefWidth="521.0" styleClass="btn_controle_de_estoque">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="-12.0" prefHeight="50.0" prefWidth="535.0" styleClass="btn_controle_de_estoque" stylesheets="@menu_view.css" text="CONSULTA DE LUCRO E CUSTO" textFill="#353a56">
+                     <font>
+                        <Font name="Century Gothic Bold" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnMenu" layoutY="7.0" mnemonicParsing="false" onAction="#btnMenu_Click" styleClass="pane_azul" stylesheets="@usuario_view.css" text="VOLTAR AO MENU" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../voltar%20branco.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="76.0" fitWidth="88.0" layoutX="743.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../nachos%202.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="645.0" layoutY="114.0" prefHeight="417.0" prefWidth="188.0" styleClass="pane_azul" stylesheets="@usuario_view.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="165.0" layoutX="24.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../5530311.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="354.0" layoutY="123.0" prefHeight="25.0" prefWidth="80.0" text="DATA FINAL">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLimpar" layoutX="479.0" layoutY="171.0" mnemonicParsing="false" onAction="#btnLimpar_Click" styleClass="btn_controle_de_estoque" stylesheets="@menu_view.css" text="LIMPAR" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Button>
+   </children>
+   <styleClass>
+      <String fx:value="mainFxmlClass" />
+      <String fx:value="raiz" />
+   </styleClass>
+</AnchorPane>

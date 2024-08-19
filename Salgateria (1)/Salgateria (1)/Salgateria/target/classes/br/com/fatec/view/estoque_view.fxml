@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.estoque_viewController">
+    <stylesheets>
+        <URL value="@estoque_view.css" />
+    </stylesheets>
+   <children>
+      <HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="812.0" styleClass="raiz" stylesheets="@menu_view.css" />
+      <TabPane fx:id="TabPane" prefHeight="519.0" prefWidth="812.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="tabEstoque" text="Estoque">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="441.0" layoutY="1.0" prefHeight="494.0" prefWidth="375.0" styleClass="pane_azul" stylesheets="@usuario_view.css">
+                           <children>
+                              <Button fx:id="btnEditar" layoutX="115.0" layoutY="254.0" mnemonicParsing="false" onAction="#btnEditar_Click" prefHeight="42.0" prefWidth="146.0" styleClass="btn_controle_de_estoque" stylesheets="@menu_view.css" text="EDITAR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="21.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Cadastro%20branco.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <ImageView fitHeight="80.0" fitWidth="75.0" layoutX="282.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../nachos%202.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnVoltar" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnVoltar_Click" styleClass="pane_azul" text="VOLTAR AO MENU" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../voltar%20branco.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnCadastrar" layoutX="94.0" layoutY="405.0" mnemonicParsing="false" onAction="#btnCadastrar_Click" prefHeight="45.0" prefWidth="187.0" styleClass="btn_controle_de_estoque" stylesheets="@menu_view.css" text="CADASTRAR INSUMO" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="15.0" />
+                                 </font></Button>
+                              <Button fx:id="btnRemover" layoutX="114.0" layoutY="178.0" mnemonicParsing="false" onAction="#btnRemover_Click" prefHeight="48.0" prefWidth="148.0" styleClass="btn_controle_de_estoque" stylesheets="@menu_view.css" text="REMOVER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../lixeira%20branco.png" />
+                                       </image></ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </Pane>
+                        <TableView fx:id="table" prefHeight="490.0" prefWidth="441.0">
+                          <columns>
+                            <TableColumn fx:id="tcProduto" prefWidth="148.0" text="Produto" />
+                            <TableColumn fx:id="tcQuantidade" prefWidth="78.0" text="Quantidade" />
+                              <TableColumn fx:id="tcValor" prefWidth="93.0" text="Valor total" />
+                              <TableColumn fx:id="tcData" prefWidth="121.0" text="Data validade" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab id="TabAltera" fx:id="TabAlterar" text="Alterar estoque">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnSalvar" layoutX="66.0" layoutY="393.0" mnemonicParsing="false" onAction="#btnSalvar_Click" prefHeight="41.0" prefWidth="105.0" styleClass="btn_deslogar" stylesheets="@menu_view.css" text="SALVAR" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Cadastro%20branco.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <TextField fx:id="txtEstoque" editable="false" layoutX="643.0" layoutY="224.0" prefHeight="25.0" prefWidth="93.0">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font></TextField>
+                        <ComboBox fx:id="cmbInsumo" layoutX="305.0" layoutY="223.0" prefWidth="150.0" />
+                        <Label alignment="BOTTOM_LEFT" layoutX="305.0" layoutY="200.0" prefHeight="17.0" prefWidth="116.0" text="Insumo">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <Label alignment="BOTTOM_LEFT" layoutX="643.0" layoutY="202.0" prefHeight="19.0" prefWidth="119.0" text="Estoque atual">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <Label alignment="BOTTOM_LEFT" layoutX="306.0" layoutY="305.0" prefHeight="19.0" prefWidth="106.0" text="Quantidade">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <TextField fx:id="txtQuantidade" layoutX="305.0" layoutY="328.0" prefHeight="25.0" prefWidth="93.0">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font></TextField>
+                        <Label alignment="BOTTOM_LEFT" layoutX="464.0" layoutY="305.0" prefHeight="19.0" prefWidth="143.0" text="Data de validade">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <DatePicker fx:id="txtDate" editable="false" layoutX="464.0" layoutY="328.0" prefHeight="25.0" prefWidth="107.0" />
+                        <TextField fx:id="txtValor" layoutX="643.0" layoutY="325.0" prefHeight="25.0" prefWidth="93.0">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font></TextField>
+                        <Label alignment="BOTTOM_LEFT" layoutX="644.0" layoutY="303.0" prefHeight="19.0" prefWidth="54.0" text="Valor">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font></Label>
+                        <Pane fx:id="pane_azul" prefHeight="114.0" prefWidth="812.0" styleClass="pane_azul" stylesheets="@usuario_view.css">
+                           <children>
+                              <Pane layoutX="155.0" layoutY="36.0" prefHeight="42.0" prefWidth="521.0" styleClass="btn_controle_de_estoque">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="-4.0" prefHeight="50.0" prefWidth="535.0" styleClass="btn_controle_de_estoque" stylesheets="@menu_view.css" text="ALTERAR ESTOQUE" textFill="#353a56">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="34.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="btnVoltarMenu" layoutY="7.0" mnemonicParsing="false" onAction="#btnVoltarMenu_click" styleClass="pane_azul" stylesheets="@usuario_view.css" text="VOLTAR AO MENU" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../voltar%20branco.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <ImageView fitHeight="76.0" fitWidth="88.0" layoutX="722.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../Icones/nachos%202.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="66.0" layoutY="177.0" prefHeight="146.0" prefWidth="168.0" styleClass="inner_pane" stylesheets="@menu_view.css">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" layoutX="19.0" layoutY="59.0" prefHeight="81.0" prefWidth="130.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="rdSaida" mnemonicParsing="false" text="SAÍDA" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Entrada" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rdEntrada" mnemonicParsing="false" text="ENTRADA" textFill="WHITE" toggleGroup="$Entrada">
+                                       <font>
+                                          <Font name="Century Gothic" size="15.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </VBox>
+                              <Label alignment="CENTER" layoutX="21.0" layoutY="7.0" prefHeight="29.0" prefWidth="124.0" text="REGÍSTRO DE" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="32.0" layoutY="31.0" prefHeight="29.0" prefWidth="97.0" text="ENTRADA" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

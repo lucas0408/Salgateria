@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="812.0" styleClass="raiz" stylesheets="@menu_view.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.view.Login_viewController">
+   <children>
+      <Pane fx:id="pane_azul" prefHeight="189.0" prefWidth="812.0" styleClass="pane_azul" stylesheets="@usuario_view.css">
+         <children>
+            <Pane layoutX="152.0" layoutY="36.0" prefHeight="42.0" prefWidth="521.0" styleClass="btn_controle_de_estoque">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="-4.0" prefHeight="50.0" prefWidth="535.0" text="LOGIN" textFill="#353a56">
+                     <font>
+                        <Font name="Century Gothic Bold" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="76.0" fitWidth="88.0" layoutX="721.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../nachos%202.png" />
+               </image>
+            </ImageView>
+            <Pane layoutY="115.0" prefHeight="404.0" prefWidth="812.0" styleClass="raiz">
+               <children>
+                  <TextField fx:id="txtCPF" layoutX="217.0" layoutY="116.0" prefHeight="26.0" prefWidth="315.0">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="font_cor" />
+                        <String fx:value="side_ankerpane" />
+                     </styleClass>
+                  </TextField>
+                  <Label layoutX="217.0" layoutY="77.0" prefHeight="29.0" prefWidth="138.0" text="CPF">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="217.0" layoutY="174.0" prefHeight="29.0" prefWidth="138.0" text="SENHA">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="cbkMostrarSenha" layoutX="217.0" layoutY="258.0" mnemonicParsing="false" onAction="#checkBoxMostrarSenha" prefHeight="27.0" prefWidth="128.0" text="MOSTRAR SENHA">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </CheckBox>
+                  <Button fx:id="btnLogar" layoutX="436.0" layoutY="317.0" mnemonicParsing="false" onAction="#bntLogarClick" prefHeight="34.0" prefWidth="86.0" styleClass="btn_deslogar" text="LOGAR" textFill="WHITE" />
+                  <ImageView fitHeight="210.0" fitWidth="202.0" layoutX="597.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../5530311.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtSenhaInvisivel" layoutX="217.0" layoutY="213.0" prefHeight="29.0" prefWidth="315.0" visible="false">
+                     <styleClass>
+                        <String fx:value="side_ankerpane" />
+                        <String fx:value="font_cor" />
+                     </styleClass></TextField>
+                  <PasswordField fx:id="txtSenha" layoutX="217.0" layoutY="213.0" prefHeight="25.0" prefWidth="315.0">
+                     <styleClass>
+                        <String fx:value="font_cor" />
+                        <String fx:value="side_ankerpane" />
+                     </styleClass>
+                  </PasswordField>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</HBox>
